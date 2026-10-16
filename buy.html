@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserve & Buy Car Online — CarWise Showroom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body>
+
+<header id="site-header"></header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow eyebrow--light">Digital Showroom Checkout</p>
+      <h1>Reserve & Purchase Your Vehicle</h1>
+      <p>Lock in your priority delivery allocation, price protection, and choose your payment deposit plan securely.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" id="buy-page-container">
+      <!-- Rendered by js/buy.js -->
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js?v=3"></script>
+<script src="js/cars-data.js?v=3"></script>
+<script src="js/app.js?v=3"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="js/payment-simulator.js?v=4"></script>
+<script src="js/bookings-orders.js?v=4"></script>
+<script src="js/ai-chat.js?v=4"></script>
+<script src="js/buy.js?v=3"></script>
+</body>
+</html>

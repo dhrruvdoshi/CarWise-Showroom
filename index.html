@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarWise — A clearer way to choose your next car</title>
+<meta name="description" content="Compare what matters, see the tradeoffs, and keep your choices in view. CarWise helps you find the right car without the showroom maze.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body>
+
+<header id="site-header"></header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-wrap">
+      <div>
+        <p class="eyebrow eyebrow--light">✦ 2026 Digital Automotive Showroom</p>
+        <h1>A car decision<br>you can <em>feel great</em> about.</h1>
+        <p>Compare what matters, see the objective tradeoffs, and keep your choices in view. CarWise helps you discover the right fit — without dealership pressure.</p>
+        <div class="hero-actions">
+          <a href="browse.html" class="btn btn--amber">Start with what matters →</a>
+          <a href="#find-your-fit" class="btn btn--ghost-light">Explore Lineup</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="stat-cars">9</strong><span>vehicles curated</span></div>
+          <div><strong>62 min</strong><span>to first shortlist</span></div>
+          <div><strong>0</strong><span>hidden fees</span></div>
+        </div>
+        <div class="hero-trust-bar">
+          <span>🛡️ 100% Honest Tradeoffs</span>
+          <span>⚡ Zero Dealer Markups</span>
+          <span>📅 Doorstep Test Drives</span>
+          <span>🔒 256-Bit Safe Payment Simulation</span>
+        </div>
+      </div>
+      <div class="hero-card" id="hero-spotlight-card">
+        <div class="hero-card__label">
+          <span>✦ Today's Spotlight</span>
+          <button id="hero-switch-car" class="btn--link" style="font-size:0.75rem; text-decoration:none;" type="button">Next vehicle ↻</button>
+        </div>
+        <div class="hero-card__media" id="hero-car-media"></div>
+        <div class="hero-card__result" id="hero-car-info">
+          <div>
+            <h3 id="hero-car-name">Volvo EX30</h3>
+            <span id="hero-car-tag">Urban electric with Scandinavian restraint</span>
+          </div>
+          <div class="hero-card__price">
+            <strong id="hero-car-price">₹42,900</strong>
+          </div>
+        </div>
+        <div style="display:flex; gap:8px; margin-top:16px;" id="hero-car-actions">
+          <a href="buy.html?id=volvo-ex30" class="btn btn--amber btn--sm" id="hero-buy-btn" style="flex:1;">⚡ Reserve Now</a>
+          <a href="test-drive.html?id=volvo-ex30" class="btn btn--dark btn--sm" id="hero-drive-btn" style="flex:1;">📅 Test Drive</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Persona / start with life not logos -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Start with life, not logos</p>
+          <h2>What does your next car need to make easier?</h2>
+        </div>
+        <p>No brand maze, no jargon quiz. Pick the one that sounds like you, and we'll narrow the list.</p>
+      </div>
+      <div class="persona-grid" id="persona-grid"></div>
+    </div>
+  </section>
+
+  <!-- Find your fit / live browse preview -->
+  <section class="section section--tight" id="find-your-fit">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Curated showroom lineup</p>
+          <h2>Find your fit.</h2>
+        </div>
+        <p>Every vehicle below has a distinct character. Start broad, then narrow by powertrain, body style, or budget.</p>
+      </div>
+
+      <div class="cw-quick-chips" id="home-quick-chips">
+        <button class="cw-quick-chip is-active" type="button" data-filter="all">All Vehicles (9)</button>
+        <button class="cw-quick-chip" type="button" data-filter="electric">⚡ 100% Electric (3)</button>
+        <button class="cw-quick-chip" type="button" data-filter="hybrid">🔋 Smart Hybrid (3)</button>
+        <button class="cw-quick-chip" type="button" data-filter="petrol">⛽ Petrol Power (3)</button>
+        <button class="cw-quick-chip" type="button" data-filter="safety">⭐ 5-Star Safety</button>
+        <button class="cw-quick-chip" type="button" data-filter="budget">💰 Under ₹30 Lakh</button>
+      </div>
+
+      <div class="filter-bar">
+        <div class="filter-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          <input type="text" id="home-search" placeholder="Search make, model, or lifestyle need (e.g., commute, electric, safe)">
+        </div>
+        <select id="home-body">
+          <option value="">All body types</option>
+        </select>
+        <select id="home-power">
+          <option value="">All powertrains</option>
+        </select>
+      </div>
+      <p class="filter-count"><strong id="home-count">0</strong> matches — <a href="browse.html" class="btn--link">see the full lineup and filters</a></p>
+      <div class="car-grid" id="home-grid"></div>
+    </div>
+  </section>
+
+  <!-- Friction / insight, dark section -->
+  <section class="section section--dark" id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow eyebrow--light">Built from the friction</p>
+          <h2>We noticed where car shopping gets in the way.</h2>
+        </div>
+        <p>We studied the experience of comparing cars across dealer sites — then kept the useful parts and removed the loops.</p>
+      </div>
+      <div class="insight-grid">
+        <div class="insight-list">
+          <div class="insight-item">
+            <span class="insight-num">01</span>
+            <div><h4>Too many clicks to reach a model</h4><p>Browse by what you need. All models live in one considered shortlist.</p></div>
+          </div>
+          <div class="insight-item">
+            <span class="insight-num">02</span>
+            <div><h4>Filters disappeared when you changed direction</h4><p>Your choices persist as you search, switch powertrains, or sort.</p></div>
+          </div>
+          <div class="insight-item">
+            <span class="insight-num">03</span>
+            <div><h4>Errors said "something went wrong"</h4><p>Inline guidance tells you what happened and the next useful action.</p></div>
+          </div>
+          <div class="insight-item">
+            <span class="insight-num">04</span>
+            <div><h4>Signing in took longer than deciding</h4><p>One clear form, one clear error at a time, a demo account to try it now.</p></div>
+          </div>
+        </div>
+        <div class="value-props">
+          <div class="value-prop">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 3 8v13h18V8z"></path><path d="M9 21v-6h6v6"></path></svg>
+            <h4>No dealership pressure</h4>
+            <p>We don't sell your attention. Compare at your own pace.</p>
+          </div>
+          <div class="value-prop">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h6"></path></svg>
+            <h4>Tradeoffs, not hype</h4>
+            <p>Every pick tells you where it shines — and where it asks for a compromise.</p>
+          </div>
+          <div class="value-prop">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 3 14h7l-1 8 11-14h-7z"></path></svg>
+            <h4>Fast to a feeling</h4>
+            <p>You should know what to try before you ever enter a showroom.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <p class="eyebrow">One good next step</p>
+          <h2>Leave with a shortlist, not a browser full of tabs.</h2>
+        </div>
+        <a href="browse.html" class="btn btn--dark">Keep exploring →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js?v=3"></script>
+<script src="js/cars-data.js?v=3"></script>
+<script src="js/app.js?v=3"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="js/payment-simulator.js?v=4"></script>
+<script src="js/bookings-orders.js?v=4"></script>
+<script src="js/ai-chat.js?v=4"></script>
+<script src="js/home.js?v=3"></script>
+</body>
+</html>

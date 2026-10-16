@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create your account — CarWise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body>
+
+<div class="auth-shell">
+  <section class="auth-visual">
+    <a href="index.html" class="brand brand--light">
+      <span class="brand__mark" id="visual-brand-icon"></span>
+      CarWise<span class="brand__dot">.</span>
+    </a>
+    <div class="auth-visual__quote">
+      <div class="auth-visual__scene" id="visual-scene"></div>
+      <h2 style="margin-top:26px;">Your shortlist, favorites and comparisons stay close by.</h2>
+      <p>Create a free account so nothing you've narrowed down gets lost between visits.</p>
+    </div>
+    <p style="position:relative; font-size:0.82rem; color:rgba(250,247,240,0.5);">A clearer way to choose — CarWise Showroom</p>
+  </section>
+
+  <section class="auth-panel">
+    <div class="auth-card">
+      <h1>Create your account</h1>
+      <p class="subtitle">Takes under a minute. No credit card, no dealership calls.</p>
+
+      <div class="form-banner" id="form-banner" role="alert">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v5M12 16h.01"></path></svg>
+        <span id="form-banner-text"></span>
+      </div>
+
+      <form id="signup-form" novalidate>
+        <div class="field" id="field-name">
+          <label for="signup-name">Full name</label>
+          <div class="input-wrap">
+            <input type="text" id="signup-name" name="name" placeholder="Your name" autocomplete="name">
+          </div>
+          <p class="error-msg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v5M12 16h.01"></path></svg>
+            <span data-error-text>Tell us what to call you.</span>
+          </p>
+        </div>
+
+        <div class="field" id="field-email">
+          <label for="signup-email">Email address</label>
+          <div class="input-wrap">
+            <input type="email" id="signup-email" name="email" placeholder="you@example.com" autocomplete="email">
+          </div>
+          <p class="error-msg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v5M12 16h.01"></path></svg>
+            <span data-error-text>Enter a valid email address.</span>
+          </p>
+        </div>
+
+        <div class="field" id="field-password">
+          <label for="signup-password">Password</label>
+          <div class="input-wrap">
+            <input type="password" id="signup-password" name="password" placeholder="At least 8 characters" autocomplete="new-password">
+            <button type="button" class="password-toggle" data-toggle-for="signup-password">Show</button>
+          </div>
+          <p class="field-hint">Use 6+ characters. Your password is securely stored by Supabase Auth.</p>
+          <p class="error-msg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v5M12 16h.01"></path></svg>
+            <span data-error-text>Password needs to be at least 8 characters.</span>
+          </p>
+        </div>
+
+        <div class="field" id="field-confirm">
+          <label for="signup-confirm">Confirm password</label>
+          <div class="input-wrap">
+            <input type="password" id="signup-confirm" name="confirm" placeholder="Type it again" autocomplete="new-password">
+            <button type="button" class="password-toggle" data-toggle-for="signup-confirm">Show</button>
+          </div>
+          <p class="error-msg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v5M12 16h.01"></path></svg>
+            <span data-error-text>Passwords don't match yet.</span>
+          </p>
+        </div>
+
+        <button type="submit" class="btn btn--dark btn--block" id="signup-submit">Create account</button>
+      </form>
+
+      <p class="auth-foot">Already have an account? <a href="login.html" class="btn--link">Sign in</a></p>
+    </div>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/cars-data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/signup.js"></script>
+</body>
+</html>
